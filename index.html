@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery/dist/jquery.js"></script>
+<script>
+    //funções dos botões superiores
+    //esconder botão
+    $(document).ready(function(){
+      $("#esconder").click(function(){
+        $("#texto").hide();
+      });
+      //mostrar botão
+      $("#mostrar").click(function(){
+        $("#texto").show();
+      });
+    //mostrar botão (com efeito de fade)
+      $("#mostrarFade").click(function(){
+        $("#texto").fadeIn("1000");
+      });
+    //esconder botão (com efeito de fade)
+      $("#esconderFade").click(function(){
+        $("#texto").fadeOut("1000");
+      });
+      $("#escorregarBaixo").click(function(){
+        $("#texto").slideDown("1000");
+      });
+      //ações dos botões inferiores
+      let posicaoX = 500, posicaoY = 200;
+      //diminuir a posição x do texto, convertê-la para string e adicionar "px" no final, mover o texto com a função "animate"
+      $("#moverEsquerda").click(function(){
+        posicaoX = posicaoX - 50;
+        const posicionamento = posicaoX.toString(); + "px";
+        $("#texto").animate({left:posicionamento}, 100);
+      });
+      //aumentar a posição x do texto, convertê-la para string e adicionar "px" no final, mover o texto com a função "animate"
+      $("#moverDireita").click(function(){
+        posicaoX = posicaoX + 50;
+        const posicionamento = posicaoX.toString(); + "px";
+        $("#texto").animate({left:posicionamento}, 100);
+      });
+      //aumentar a posição y do texto, convertê-la para string e adicionar "px" no final, mover o texto com a função "animate"
+      $("#moverBaixo").click(function(){
+        posicaoY = posicaoY + 50;
+        const posicionamento = posicaoY.toString(); + "px";
+        $("#texto").animate({top:posicionamento}, 100);
+      });
+      //diminuir a posição y do texto, convertê-la para string e adicionar "px" no final, mover o texto com a função "animate"
+      $("#moverCima").click(function(){
+        posicaoY = posicaoY - 50;
+        const posicionamento = posicaoY.toString(); + "px";
+        $("#texto").animate({top:posicionamento}, 100);
+      });
+      
+    });
+</script>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <p id="texto">Olá mundo!</p>
+    <button id="esconder" class = "botoesTopo">Esconder</button>
+    <button id="mostrar" class = "botoesTopo">Mostrar</button>
+    <button id="mostrarFade" class = "botoesTopo">Mostrar (fade)</button>
+    <button id="esconderFade" class = "botoesTopo">Esconder (fade)</button>
+    <button id="moverEsquerda" class = "botoesInferiores" >&lt;</button>
+    <button id="moverDireita" class = "botoesInferiores" >&gt;</button>
+    <button id="moverCima" class = "botoesInferiores" >^</button>
+    <button id="moverBaixo" class = "botoesInferiores" >V</button>
+
+</body>
+</html>

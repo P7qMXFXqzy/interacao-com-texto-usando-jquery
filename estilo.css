@@ -1,0 +1,65 @@
+body{background-color:black}
+#texto{
+    font-size:50px;
+    color:red;
+    position:absolute;
+    left:550px;
+    top:200px;
+}
+.botoesTopo{
+    position:absolute;
+    top:1%;
+    font-size:20px;
+}
+
+.botoesTopo:active{top:1.5%;}
+
+#esconder{
+    color: white;
+    background-color: red;
+    left:1%;
+}
+#mostrar{
+    color: white;
+    background-color: orange;
+    left:10%;
+}
+#mostrarFade{
+    background-color: yellow;
+    color: grey;
+    left:18%;
+}
+#esconderFade{
+    background-color: green;
+    color: white;
+    left:30%;
+}
+
+.botoesInferiores{
+    font-size:30px;
+    position:absolute;
+    top:92%
+}
+
+.botoesInferiores:active{top:92.5%;}
+
+#moverEsquerda{
+    background-color:cyan;
+    color:grey;
+    left:1%;
+}
+#moverDireita{
+    background-color:blue;
+    color:grey;
+    left:5%;
+}
+#moverCima{
+    background-color: rgb(95, 3, 95);
+    color: white;
+    left:9%;
+}
+#moverBaixo{
+    background-color: rgb(243, 43, 183);
+    color: grey;
+    left:12.6%;
+}
